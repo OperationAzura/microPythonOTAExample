@@ -1,7 +1,8 @@
 from main.ota import OTAUpdater
 
 def download_and_install_update_if_available():
-    o = OTAUpdater('https://github.com/OperationAzura/microPythonOTAExample.git')
+    o = OTAUpdater('https://github.com/OperationAzura/microPythonOTAExample')
+    o.check_for_update_to_install_during_next_reboot()
     o.download_and_install_update_if_available('DWW 2.4', 'bazinga1')
 
 def start():
