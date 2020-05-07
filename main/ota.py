@@ -114,6 +114,7 @@ class OTAUpdater:
         latest_release = self.http_client.get(self.github_repo + '/releases/latest')
         version = latest_release.json()['tag_name']
         latest_release.close()
+        print('version: ',version)
         return version
 
     def download_all_files(self, root_url, version):
